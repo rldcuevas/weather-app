@@ -1,0 +1,106 @@
+body {
+	background: #56CCF2;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	color: #FFF;
+	font-family: 'Roboto', sans-serif;
+}
+
+.loading {
+	background: transparent url(../img/tail-spin.svg) no-repeat center;
+    position: absolute;
+	width: 100%;
+    height: 100%;
+}
+
+#weather {
+	padding-top: 3em;
+}
+
+	#weather .city {
+		font-size: 2em;
+		text-shadow: 1px 2px 5px #0F0000;
+		-moz-text-shadow: 1px 2px 5px #0F0000;
+		-webkit-text-shadow: 1px 2px 5px #0F0000;
+	}
+
+	#weather .sub {
+		border-bottom: 2px solid #f8eded;
+		padding-bottom: 17px;
+		font-size: 1.5em;
+	}
+
+	#weather .description {
+		margin-left: 8px;
+	}
+
+	#weather .temp {
+		min-height: 205px;
+    	font-size: 11em;
+    	text-shadow: 1px 2px 5px #0F0000;
+		-moz-text-shadow: 1px 2px 5px #0F0000;
+		-webkit-text-shadow: 1px 2px 5px #0F0000;
+
+		-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       	-moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+	}
+
+	@keyframes fadein {
+	    from { opacity: 0; }
+	    to   { opacity: 1; }
+	}
+
+	#weather .temp.fahrenheit {
+		display: none;
+	}
+
+	#weather .temp-toggle {
+		height: 10em;
+	}
+
+	#weather .temp-toggle button {
+		color: #FFF;
+		background: #A8A8A8;
+		box-shadow: 0 3px 0 #50596f;
+		-moz-box-shadow: 0 3px 0 #50596f;
+		-webkit-box-shadow: 0 3px 0 #50596f;
+	}
+
+	#weather .temp-toggle button:hover,
+	#weather .temp-toggle button.active,
+	#weather .temp-toggle button.focus {
+		cursor: pointer;
+		box-shadow: 0 3px 0 #50596f;
+		-moz-box-shadow: 0 3px 0 #50596f;
+		-webkit-box-shadow: 0 3px 0 #50596f;
+		background: #777676;
+	}
+
+footer p a {
+	color: #464a4c;
+}
+footer p a:hover {
+	color: #FFF;
+}
+
+@media (max-width: 575px) {
+
+	#weather .city {
+		font-size: 1.5em;
+	}
+
+	#weather .sub {
+		margin-top: 5px;
+		font-size: 1.1em;
+	}
+	
+	#weather .temp {
+		font-size: 7.5em;
+		min-height: 170px;
+	}
+
+}
